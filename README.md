@@ -1,46 +1,46 @@
 # Checkpoint 1 - API de Gerenciamento de Pedidos (Spring Boot)
 
-Este projeto consiste em uma API REST desenvolvida para a avaliação do Checkpoint 1 da FIAP. [cite_start]A aplicação permite realizar o gerenciamento completo de pedidos (CRUD), seguindo as melhores práticas de desenvolvimento com o framework Spring Boot[cite: 1, 2].
+Este projeto consiste em uma API REST desenvolvida para a avaliação do Checkpoint 1 da FIAP. A aplicação permite realizar o gerenciamento completo de pedidos (CRUD), seguindo as melhores práticas de desenvolvimento com o framework Spring Boot.
 
 ## 🚀 Tecnologias Utilizadas
 
-* [cite_start]**Java 21**: Linguagem principal do projeto[cite: 2].
-* [cite_start]**Spring Boot 4.0.6**: Framework para construção da API[cite: 2].
-* [cite_start]**Spring Data JPA**: Para persistência de dados e mapeamento objeto-relacional[cite: 2].
-* [cite_start]**H2 Database**: Banco de dados em memória para ambiente de desenvolvimento[cite: 2].
-* [cite_start]**Lombok**: Para redução de código boilerplate (Getters/Setters)[cite: 2].
-* [cite_start]**Bean Validation**: Para validação dos dados de entrada[cite: 2].
-* [cite_start]**Maven**: Ferramenta de gerenciamento de dependências e automação de build[cite: 2].
+* **Java 21**: Linguagem principal do projeto.
+* **Spring Boot 4.0.6**: Framework para construção da API.
+* **Spring Data JPA**: Para persistência de dados e mapeamento objeto-relacional.
+* **H2 Database**: Banco de dados em memória para ambiente de desenvolvimento.
+* **Lombok**: Para redução de código boilerplate (Getters/Setters).
+* **Bean Validation**: Para validação dos dados de entrada.
+* **Maven**: Ferramenta de gerenciamento de dependências e automação de build.
 
 ## 🏗️ Arquitetura do Projeto
 
 A aplicação segue o padrão de arquitetura em camadas para garantir a separação de responsabilidades:
 
-1.  [cite_start]**Model**: Representa a entidade `Pedidos` no banco de dados[cite: 6, 13].
-2.  [cite_start]**Repository**: Interface que estende `JpaRepository` para operações de banco de dados[cite: 34, 35].
-3.  [cite_start]**Service**: Camada de lógica de negócio da aplicação[cite: 37, 52].
-4.  [cite_start]**Controller**: Camada de exposição das rotas (Endpoints) da API[cite: 56, 58].
+1.  **Model**: Representa a entidade `Pedidos` no banco de dados.
+2.  **Repository**: Interface que estende `JpaRepository` para operações de banco de dados.
+3.  **Service**: Camada de lógica de negócio da aplicação.
+4.  **Controller**: Camada de exposição das rotas (Endpoints) da API.
 
 ## 🛠️ Configurações da Aplicação
 
-[cite_start]As configurações de execução e banco de dados estão definidas no arquivo `application.properties`[cite: 95]:
+As configurações de execução e banco de dados estão definidas no arquivo `application.properties`:
 
-* [cite_start]**Porta do Servidor**: 8085[cite: 98].
-* [cite_start]**Banco de Dados**: H2 (Arquivo local em `~/testdb`)[cite: 100].
-* [cite_start]**Console H2**: Disponível em `/h2-console`[cite: 108].
-* [cite_start]**Credenciais H2**: Usuário `sa`, Senha `password`[cite: 100].
+* **Porta do Servidor**: 8085.
+* **Banco de Dados**: H2 (Arquivo local em `~/testdb`).
+* **Console H2**: Disponível em `/h2-console`.
+* **Credenciais H2**: Usuário `sa`, Senha `password`.
 
 ## 📑 Endpoints da API (Rotas)
 
-[cite_start]A API responde na URL base `http://localhost:8085/orders`[cite: 60, 98].
+A API responde na URL base `http://localhost:8085/orders`.
 
 | Método | Endpoint | Descrição |
 | :--- | :--- | :--- |
-| **POST** | `/orders` | [cite_start]Cria um novo pedido [cite: 65, 70] |
-| **GET** | `/orders` | [cite_start]Lista todos os pedidos cadastrados [cite: 72, 73] |
-| **GET** | `/orders/{id}` | [cite_start]Busca um pedido específico pelo ID [cite: 75, 79] |
-| **PUT** | `/orders/{id}` | [cite_start]Atualiza os dados de um pedido existente [cite: 81, 86] |
-| **DELETE** | `/orders/{id}` | [cite_start]Remove um pedido do sistema [cite: 88, 92] |
+| **POST** | `/orders` | Cria um novo pedido |
+| **GET** | `/orders` | Lista todos os pedidos cadastrados |
+| **GET** | `/orders/{id}` | Busca um pedido específico pelo ID |
+| **PUT** | `/orders/{id}` | Atualiza os dados de um pedido existente |
+| **DELETE** | `/orders/{id}` | Remove um pedido do sistema |
 
 ## 📦 Como Executar
 
